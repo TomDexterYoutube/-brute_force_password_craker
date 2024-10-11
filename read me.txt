@@ -1,0 +1,3 @@
+install python3 or newer
+put what you want it to type in data.txt and make the recommended delay is 0.1
+run setup.bat before you use it
