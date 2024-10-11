@@ -5,7 +5,10 @@ import threading
 import tkinter as tk
 from tqdm import tqdm
 
-delay = float(input("delay /"))
+if input("use custom delay /") == "y":
+    delay = float(input("delay /"))
+else:
+    delay = 0.000005
 
 with tqdm(total=10, desc="Starting", unit="sec", unit_scale=True) as pbar:
     for _ in range(10):  # Iterate 10 times for 10 seconds.
@@ -43,7 +46,7 @@ def type_text(file_path):
                     break
                 
                 while is_paused:  # Wait while paused
-                    time.sleep(delay)  # Sleep briefly to prevent high CPU usage
+                    time.sleep(0.0000001)  # Sleep briefly to prevent high CPU usage
 
                 # Read file in chunks (1 character at a time)
                 char = file.read(1)  # Read one character
@@ -62,7 +65,7 @@ def type_text(file_path):
                 pbar.update(1)  # Increment by one byte (character)
 
                 # Introduce a short delay to avoid overwhelming the input system
-                time.sleep(0.000005)
+                time.sleep(delay)
 
     # Send an "Enter" key at the end to finalize input
     pyautogui.press("enter")
