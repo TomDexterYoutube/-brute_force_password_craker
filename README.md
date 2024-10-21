@@ -4,3 +4,4 @@ after that run brute_force_file_run.py and set the delay (recommended 0.1 the lo
 IMPORTANT DO NOT PRESS ANY BUTTONS WHILE IT IS RUNNING IF YOU NEED TO DO SOMETHING PRESS THE PAUSE BUTTON OR CLOSE THE TAB
 note that the needed delay changes depending what your typing into
 for cmd and python the minimum delay is 0.000005 
+the password.py is a speed tester to use it make sure that the brute force file gen is set to 5 letters long has upper-case lower-case and numbers but no special characters 
