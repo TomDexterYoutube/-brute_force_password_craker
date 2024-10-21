@@ -8,7 +8,7 @@ from tqdm import tqdm
 if input("use custom delay /") == "y":
     delay = float(input("delay /"))
 else:
-    delay = 0.000005
+    delay = 0.1
 
 with tqdm(total=10, desc="Starting", unit="sec", unit_scale=True) as pbar:
     for _ in range(10):  # Iterate 10 times for 10 seconds.
